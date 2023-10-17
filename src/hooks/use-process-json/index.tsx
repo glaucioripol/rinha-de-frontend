@@ -35,8 +35,6 @@ export function useProcessJsonFile() {
 
   return {
     state: validationJsonState,
-    actions: {
-      processFile,
-    },
+    actions: { processFile },
   };
 }

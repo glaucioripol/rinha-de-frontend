@@ -1,9 +1,11 @@
+import { ValidationJsonState } from "./types";
+
 const parseJsonWorker = self as unknown as Worker;
 
 parseJsonWorker.onmessage = (event: MessageEvent<File>) => {
   const jsonFile = event.data;
 
-  const defaultPayload = {
+  const defaultPayload: ValidationJsonState = {
     isProcessing: false,
     error: null,
     parsedJson: null,
